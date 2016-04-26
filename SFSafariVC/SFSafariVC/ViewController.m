@@ -23,22 +23,22 @@
     _button.layer.masksToBounds = YES;
 }
 - (IBAction)action:(UIButton *)sender {
-    NSString *textToShare = @"要分享的文本内容";
-//    UIImage *imageToShare = [UIImage imageNamed:@"Icon72x72.png"];
-    NSURL *urlToShare = [NSURL URLWithString:@"httts://www.baidu.com"];
-    NSArray *activityItems = @[textToShare, urlToShare];
+//    NSString *textToShare = @"要分享的文本内容";
+////    UIImage *imageToShare = [UIImage imageNamed:@"Icon72x72.png"];
+//    NSURL *urlToShare = [NSURL URLWithString:@"httts://www.baidu.com"];
+//    NSArray *activityItems = @[textToShare, urlToShare];
+//    
+//    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
+//    activityVC.excludedActivityTypes = @[UIActivityTypePostToFacebook,UIActivityTypePostToWeibo,UIActivityTypePostToTwitter,
+//                                         UIActivityTypePrint];
+//    [self presentViewController:activityVC animated:YES completion:nil];
     
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
-    activityVC.excludedActivityTypes = @[UIActivityTypePostToFacebook,UIActivityTypePostToWeibo,UIActivityTypePostToTwitter,
-                                         UIActivityTypePrint];
-    [self presentViewController:activityVC animated:YES completion:nil];
     
-    
-//    NSURL * url = [NSURL URLWithString:@"https://www.baidu.com"];
-//    SFSafariViewController * SFSafariVC = [[SFSafariViewController alloc]initWithURL:url entersReaderIfAvailable:YES];
-//    SFSafariVC.view.tintColor = [UIColor redColor];
-//    SFSafariVC.delegate = self;
-//    [self presentViewController:SFSafariVC animated:YES completion:nil];
+    NSURL * url = [NSURL URLWithString:@"https://www.baidu.com"];
+    SFSafariViewController * SFSafariVC = [[SFSafariViewController alloc]initWithURL:url entersReaderIfAvailable:YES];
+    SFSafariVC.view.tintColor = [UIColor redColor];
+    SFSafariVC.delegate = self;
+    [self presentViewController:SFSafariVC animated:YES completion:nil];
 }
 #pragma mark - SFSafariViewControllerDelegate
 //- (NSArray<UIActivity *> *)safariViewController:(SFSafariViewController *)controller activityItemsForURL:(NSURL *)URL title:(nullable NSString *)title{
