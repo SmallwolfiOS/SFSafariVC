@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import <SafariServices/SafariServices.h>
 
-@interface ViewController ()
+@interface ViewController ()<SFSafariViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *button;
 
 @end
@@ -23,9 +23,33 @@
     _button.layer.masksToBounds = YES;
 }
 - (IBAction)action:(UIButton *)sender {
-    NSURL * url = [NSURL URLWithString:@"https://www.baidu.com"];
-    SFSafariViewController * SFSafariVC = [[SFSafariViewController alloc]initWithURL:url entersReaderIfAvailable:YES];
-    [self presentViewController:SFSafariVC animated:YES completion:nil];
+    NSString *textToShare = @"要分享的文本内容";
+//    UIImage *imageToShare = [UIImage imageNamed:@"Icon72x72.png"];
+    NSURL *urlToShare = [NSURL URLWithString:@"httts://www.baidu.com"];
+    NSArray *activityItems = @[textToShare, urlToShare];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
+    activityVC.excludedActivityTypes = @[UIActivityTypePostToFacebook,UIActivityTypePostToWeibo,UIActivityTypePostToTwitter,
+                                         UIActivityTypePrint];
+    [self presentViewController:activityVC animated:YES completion:nil];
+    
+    
+//    NSURL * url = [NSURL URLWithString:@"https://www.baidu.com"];
+//    SFSafariViewController * SFSafariVC = [[SFSafariViewController alloc]initWithURL:url entersReaderIfAvailable:YES];
+//    SFSafariVC.view.tintColor = [UIColor redColor];
+//    SFSafariVC.delegate = self;
+//    [self presentViewController:SFSafariVC animated:YES completion:nil];
+}
+#pragma mark - SFSafariViewControllerDelegate
+//- (NSArray<UIActivity *> *)safariViewController:(SFSafariViewController *)controller activityItemsForURL:(NSURL *)URL title:(nullable NSString *)title{
+//    
+//}
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller{
+    NSLog(@"点击了Done");
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)safariViewController:(SFSafariViewController *)controller didCompleteInitialLoad:(BOOL)didLoadSuccessfully{
+    NSLog(@"网页加载完成");
 }
 
 - (void)didReceiveMemoryWarning {

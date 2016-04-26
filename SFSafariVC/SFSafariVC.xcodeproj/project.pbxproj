@@ -13,6 +13,7 @@
 		96C74EB11CCF0785001C433A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C74EAF1CCF0785001C433A /* Main.storyboard */; };
 		96C74EB31CCF0785001C433A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96C74EB21CCF0785001C433A /* Assets.xcassets */; };
 		96C74EB61CCF0785001C433A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C74EB41CCF0785001C433A /* LaunchScreen.storyboard */; };
+		E2304B8F1CCFA25900264B98 /* Icon72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = E2304B8E1CCFA25900264B98 /* Icon72x72.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		96C74EB21CCF0785001C433A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96C74EB51CCF0785001C433A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96C74EB71CCF0785001C433A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2304B8E1CCFA25900264B98 /* Icon72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon72x72.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				96C74EAD1CCF0785001C433A /* ViewController.m */,
 				96C74EAF1CCF0785001C433A /* Main.storyboard */,
 				96C74EB21CCF0785001C433A /* Assets.xcassets */,
+				E2304B8E1CCFA25900264B98 /* Icon72x72.png */,
 				96C74EB41CCF0785001C433A /* LaunchScreen.storyboard */,
 				96C74EB71CCF0785001C433A /* Info.plist */,
 				96C74EA61CCF0785001C433A /* Supporting Files */,
@@ -139,6 +142,7 @@
 				96C74EB61CCF0785001C433A /* LaunchScreen.storyboard in Resources */,
 				96C74EB31CCF0785001C433A /* Assets.xcassets in Resources */,
 				96C74EB11CCF0785001C433A /* Main.storyboard in Resources */,
+				E2304B8F1CCFA25900264B98 /* Icon72x72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +304,7 @@
 				96C74EBC1CCF0785001C433A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
