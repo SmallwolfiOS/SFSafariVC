@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9659C7EA1CD05F1600E7FA08 /* HPActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9659C7E91CD05F1600E7FA08 /* HPActivity.m */; };
+		9659C7EC1CD06AD800E7FA08 /* Group.png in Resources */ = {isa = PBXBuildFile; fileRef = 9659C7EB1CD06AD800E7FA08 /* Group.png */; };
+		9659C7EE1CD06B4F00E7FA08 /* Group2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9659C7ED1CD06B4F00E7FA08 /* Group2.png */; };
+		9659C7F21CD06C1200E7FA08 /* Group 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9659C7F11CD06C1200E7FA08 /* Group 3.png */; };
 		96C74EA81CCF0785001C433A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C74EA71CCF0785001C433A /* main.m */; };
 		96C74EAB1CCF0785001C433A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C74EAA1CCF0785001C433A /* AppDelegate.m */; };
 		96C74EAE1CCF0785001C433A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C74EAD1CCF0785001C433A /* ViewController.m */; };
@@ -17,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9659C7E81CD05F1600E7FA08 /* HPActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPActivity.h; sourceTree = "<group>"; };
+		9659C7E91CD05F1600E7FA08 /* HPActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPActivity.m; sourceTree = "<group>"; };
+		9659C7EB1CD06AD800E7FA08 /* Group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Group.png; sourceTree = "<group>"; };
+		9659C7ED1CD06B4F00E7FA08 /* Group2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Group2.png; sourceTree = "<group>"; };
+		9659C7F11CD06C1200E7FA08 /* Group 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 3.png"; sourceTree = "<group>"; };
 		96C74EA31CCF0785001C433A /* SFSafariVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFSafariVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C74EA71CCF0785001C433A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96C74EA91CCF0785001C433A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,11 +69,16 @@
 		96C74EA51CCF0785001C433A /* SFSafariVC */ = {
 			isa = PBXGroup;
 			children = (
+				9659C7E81CD05F1600E7FA08 /* HPActivity.h */,
+				9659C7E91CD05F1600E7FA08 /* HPActivity.m */,
 				96C74EA91CCF0785001C433A /* AppDelegate.h */,
 				96C74EAA1CCF0785001C433A /* AppDelegate.m */,
 				96C74EAC1CCF0785001C433A /* ViewController.h */,
 				96C74EAD1CCF0785001C433A /* ViewController.m */,
 				96C74EAF1CCF0785001C433A /* Main.storyboard */,
+				9659C7F11CD06C1200E7FA08 /* Group 3.png */,
+				9659C7ED1CD06B4F00E7FA08 /* Group2.png */,
+				9659C7EB1CD06AD800E7FA08 /* Group.png */,
 				96C74EB21CCF0785001C433A /* Assets.xcassets */,
 				E2304B8E1CCFA25900264B98 /* Icon72x72.png */,
 				96C74EB41CCF0785001C433A /* LaunchScreen.storyboard */,
@@ -139,7 +153,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9659C7F21CD06C1200E7FA08 /* Group 3.png in Resources */,
+				9659C7EC1CD06AD800E7FA08 /* Group.png in Resources */,
 				96C74EB61CCF0785001C433A /* LaunchScreen.storyboard in Resources */,
+				9659C7EE1CD06B4F00E7FA08 /* Group2.png in Resources */,
 				96C74EB31CCF0785001C433A /* Assets.xcassets in Resources */,
 				96C74EB11CCF0785001C433A /* Main.storyboard in Resources */,
 				E2304B8F1CCFA25900264B98 /* Icon72x72.png in Resources */,
@@ -153,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9659C7EA1CD05F1600E7FA08 /* HPActivity.m in Sources */,
 				96C74EAE1CCF0785001C433A /* ViewController.m in Sources */,
 				96C74EAB1CCF0785001C433A /* AppDelegate.m in Sources */,
 				96C74EA81CCF0785001C433A /* main.m in Sources */,
@@ -199,7 +217,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Chinasys Technology Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Chinasys Technology Co., Ltd.";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -221,6 +240,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "be08dd84-fac2-48fd-9066-a6952b23d527";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -258,6 +278,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "be08dd84-fac2-48fd-9066-a6952b23d527";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -267,10 +288,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Guoxing Jiang (NH4JYC34AZ)";
 				INFOPLIST_FILE = SFSafariVC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chnsys.SFSafariVC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chnsys.InternetKT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9558ba30-5989-44d4-94ee-293340670fc6";
 			};
 			name = Debug;
 		};
@@ -279,9 +303,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SFSafariVC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chnsys.SFSafariVC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chnsys.InternetKT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9558ba30-5989-44d4-94ee-293340670fc6";
 			};
 			name = Release;
 		};

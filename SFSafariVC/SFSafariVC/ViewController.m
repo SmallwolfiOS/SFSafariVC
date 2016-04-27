@@ -8,9 +8,12 @@
 
 #import "ViewController.h"
 #import <SafariServices/SafariServices.h>
+#import "HPActivity.h"
+
 
 @interface ViewController ()<SFSafariViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *button;
+@property (weak, nonatomic) IBOutlet UISwitch *gSwitch;
 
 @end
 
@@ -23,17 +26,27 @@
     _button.layer.masksToBounds = YES;
 }
 - (IBAction)action:(UIButton *)sender {
-//    NSString *textToShare = @"要分享的文本内容";
-////    UIImage *imageToShare = [UIImage imageNamed:@"Icon72x72.png"];
-//    NSURL *urlToShare = [NSURL URLWithString:@"httts://www.baidu.com"];
-//    NSArray *activityItems = @[textToShare, urlToShare];
-//    
-//    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
-//    activityVC.excludedActivityTypes = @[UIActivityTypePostToFacebook,UIActivityTypePostToWeibo,UIActivityTypePostToTwitter,
-//                                         UIActivityTypePrint];
-//    [self presentViewController:activityVC animated:YES completion:nil];
+    if (_gSwitch.on) {
+        [self openActivityViewController];
+    }else{
+        [self openSFSafariViewController];
+    }
+}
+- (void)openActivityViewController{
+    NSString *textToShare = @"微博跑";
+    UIImage * imageToShare = [UIImage imageNamed:@"Icon72x72.png"];
+    NSURL *urlToShare = [NSURL URLWithString:@"httts://www.baidu.com"];
+    NSArray *activityItems = @[textToShare, urlToShare];
     
+    HPActivity * weiboAC = [[HPActivity alloc]initWithImage:imageToShare atURL:@"httts://www.baidu.com" atTitle:textToShare atShareContentArray:activityItems];
     
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:@[weiboAC]];
+    //不需要显示的，在这里屏蔽掉
+    activityVC.excludedActivityTypes = @[UIActivityTypePostToFacebook,UIActivityTypePostToWeibo,UIActivityTypePostToTwitter,UIActivityTypePrint];
+    
+    [self presentViewController:activityVC animated:YES completion:nil];
+}
+- (void)openSFSafariViewController{
     NSURL * url = [NSURL URLWithString:@"https://www.baidu.com"];
     SFSafariViewController * SFSafariVC = [[SFSafariViewController alloc]initWithURL:url entersReaderIfAvailable:YES];
     SFSafariVC.view.tintColor = [UIColor redColor];
@@ -41,16 +54,26 @@
     [self presentViewController:SFSafariVC animated:YES completion:nil];
 }
 #pragma mark - SFSafariViewControllerDelegate
-//- (NSArray<UIActivity *> *)safariViewController:(SFSafariViewController *)controller activityItemsForURL:(NSURL *)URL title:(nullable NSString *)title{
-//    
-//}
+- (NSArray<UIActivity *> *)safariViewController:(SFSafariViewController *)controller activityItemsForURL:(NSURL *)URL title:(nullable NSString *)title{
+    NSString *textToShare = @"微博跑";
+    UIImage * imageToShare = [UIImage imageNamed:@"Group2.png"];
+    NSURL *urlToShare = [NSURL URLWithString:@"httts://www.baidu.com"];
+    NSArray *activityItems = @[textToShare, urlToShare];
+    
+    HPActivity * weiboAC = [[HPActivity alloc]initWithImage:imageToShare atURL:@"httts://www.baidu.com" atTitle:textToShare atShareContentArray:activityItems];
+    
+    
+    return @[weiboAC];
+}
 - (void)safariViewControllerDidFinish:(SFSafariViewController *)controller{
     NSLog(@"点击了Done");
-    [controller dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (void)safariViewController:(SFSafariViewController *)controller didCompleteInitialLoad:(BOOL)didLoadSuccessfully{
     NSLog(@"网页加载完成");
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
